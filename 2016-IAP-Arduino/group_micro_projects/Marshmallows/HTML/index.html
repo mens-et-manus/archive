@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+</head>
+
+<body>
+<h1>
+Marshmallow Turret !!!
+</h1>
+
+<h2>
+Humans
+</h2>
+<p>
+Mindy Wu
+</p>
+<p>
+Ric Lebre
+</p>
+<p>
+Henry Cheung
+</p>
+<p>
+Yijun Jiang
+</p>
+
+<h2>
+Project description
+</h2>
+<p>
+We are building an Arduino-controlled turret that fires marshmallows at people/zombies/aliens/etc. Once completed, this project will have great applications, from defending our school against Caltech intruders to fighting against the First Order.
+</p>
+
+<h2>
+Mechanical design
+</h2>
+<p>
+Mindy developed a great structure out of an Amazon packaging box.
+</p>
+<img src="design.png" alt="Mechanical design" style="width:600px;height:300px;">
+<h3>
+Here is how it works. The sequence below can be easily programmed into an Arduino board.
+</h3>
+<p>
+To load
+</p>
+<p>
+(1) Rotate the servo out of the way
+</p>
+<p>
+(2) Pull the string with the DC motor until the movable arm is at its lowest position
+</p>
+<p>
+(3) Rotate the servo back to jam the movable arm
+</p>
+<p>
+(4) Rewind the DC motor to loosen the string
+</p>
+<p>
+To fire
+</p>
+<p>
+(5) Rotate the servo and unblock the movable arm
+</p>
+
+<h2>
+Electronic design
+</h2>
+<h3>
+How to rewind a DC motor
+</h2>
+<p>
+Since it was hard to find a suitable integrated H-bridge chip, we decided to build our own H-bridge. Two relays are used as SPDT switches. The circuit diagram is shown here:
+</p>
+<img src="H-bridge.png" alt="H-bridge" style="width:800px;height:450px;">
+
+<p>
+<caption>Current direction control</caption>
+<table style="width:50%">
+  <tr>
+    <td>Pin 7 = HIGH, Pin 8 = LOW</td>
+    <td>Pin 7 = LOW, Pin 8 = HIGH</td>
+    <td>Pin 7 = HIGH, Pin 8 = HIGH</td>
+    <td>Pin 7 = LOW, Pin 8 = LOW</td>
+  </tr>
+  <tr>
+    <td>A---B</td>
+    <td>B---A</td> 
+    <td>No current</td>
+    <td>No current</td>
+  </tr>
+</table>
+</p>
+
+<h3>
+Arduino layout
+</h3>
+<img src="layout.png" alt="Layout" style="width:1000px;height:550px;">
+
+<h2>
+Marshmallow Headquarters on PC
+</h2>
+<p>
+We wrote a GUI by C# that talks to the Arduino board through a serial port. Therefore, besides controlling our weapon by pushbuttons, we can also load and fire on a computer.
+</p>
+<img src="GUI.png" alt="GUI" style="width:500px;height:600px;">
+
+<h2>
+More features to be expected!
+</h2>
+<p>
+(1) Rotating turret controlled by the GUI: aim at your enemy with your mouse!
+</p>
+<p>
+(2) Voice control: use your vocal cord as a trigger!
+</p>
+<p>
+(3) Auto-targeting with IR sensor: nowhere to hide!
+</p>
+<p>
+(4) Auto-loading and multiple shots per trigger: an automatic weapon!
+</p>
+
+</body>
+</html>

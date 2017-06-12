@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mini EDB</title>
+</head>
+
+<h1>Mini EDB Project</h1>
+<img src="arduino.png" width="100" height="50">
+<img src="iap.jpg" width="100" height="50">
+
+<body>
+	<h2>Group Members</h2>
+	Alexandria
+	<br>
+	Sara
+	<br>
+	Michael
+
+	<h2>Description</h2>
+	We want to build the mini version of our Electrodynamic Balance (EDB) lab version.<br>
+
+	<a href="http://userpage.chemie.fu-berlin.de/fb_chemie/ipc/baumgwww/www/AGPages/Falle/trap1.htm" target="blank">
+	<img src="SimpleEDB_Leisner_group.jpg" alt="Simple EDB (Opens in a New Page)" height="200"></a>
+	<br>
+	Example simple EDB design in Thomas Leisner lab, using 3 rings (washers) with AC current applied to middle ring and DC applied to top or bottom ring
+	
+	<h2>Progress (Last updated ~1800 on 19.01.2016)</h2>
+	First attempt to trap a particle ('Arizona Test Dust') with our mini-EDB was unsuccessful.  We think that AC voltage was not high enough (may need to add audio amplifier that is used in our current EDB design).  The other possibility is that we did successfully trap a particle but were unable to see it with our naked eyes.
+	<br><br>
+	Next steps: <br>
+	1. Increase trapping voltage capabilities, use smaller particles and/or adjust geometries of the trap<br>
+	2. Image and illuminate real particles (probably all set here)<br>
+	3. Send signals from Labview to Arduino (not really sure how to do this yet)<br>
+	4. Send signals from Arduino to AC (function generator) control via serial connection (started on this)<br>
+	5. Finish Labview program so that AC/DC signals are automatically adjusted to maintain particle position
+	<br>
+	
+	<a href="Screenshot_of_Particle_View_Software_w_wire_mesh_target.jpg"><img src="Screenshot_of_Particle_View_Software_w_wire_mesh_target.jpg" height="150"></a><br>
+	Screenshot of the Particle View Software (with a wire mesh target backlit with a red LED)<br>
+	--> Number of particles and their x and y positions now being output<br><br>
+	
+	<a href="Photo_of_wire_mesh_target_and_miniEDB.jpg"><img src="Photo_of_wire_mesh_target_and_miniEDB.jpg" height="150"></a><br>
+	Photo of the wire mesh target and mini-EDB<br><br>
+	
+	<h2>Documents</h2>
+	<a href="miniEDB_plan.jpg">Mini-EDB Plan Outline</a>
+	<br>
+	<a href="Labview_Camera_Control/index.html">Labview Camera Control vi's</a>
+
+
+	<h2>Stuff we need from Microcenter/Amazon</h2>
+	<a href="http://www.microcenter.com/product/442464/18_ST7735R_TFT_LCD_Module_with_MicroSD_LED_Backlight_For_Arduino_and_Raspberry_Pi" target="blank">TFT_LCD_Module_with_MicroSD_LED_Backlight_For_Arduino_and_Raspberry_Pi</a>
+	<br>
+	<a href="http://www.microcenter.com/product/442456/LCD_Keypad_Shield_For_Arduino" target="blank">LCD_Keypad_Shield_For_Arduino</a>
+	<br>
+	<a href="http://www.microcenter.com/product/392678/USB_2_Serial_Converter" target="blank">USB_2_Serial_Converter</a>
+	<br>
+	<a href="http://www.microcenter.com/product/432350/FTDI_Adapter_USB_Controller" target="blank">FTDI_Adapter_USB_Controller</a>
+	<br>
+	<a href="http://www.microcenter.com/product/456666/Monochrome_13_128x64_OLED_Graphic_Display" target="blank">Monochrome_13_128x64_OLED_Graphic_Display</a>
+	<br>
+	<a href="http://www.amazon.com/RS232-Shield-V2-for-Arduino/dp/B0122FH33C/ref=pd_sim_147_4?ie=UTF8&dpID=41f0GIGIJyL&dpSrc=sims&preST=_AC_UL160_SR149%2C160_&refRID=0CAENMW7614R2V7T895T" target="blank"> 2x RS232-Shield-V2-for-Arduino</a>
+	<br>
+	<a href="http://www.amazon.com/SparkFun-SAMD21-Mini-Breakout/dp/B018RKKRVG/ref=sr_1_1?s=electronics&ie=UTF8&qid=1452892683&sr=1-1&keywords=DAC+breakout+arduino" target="blank">SparkFun-SAMD21-Mini-Breakout</a>
+	<br>
+	<a href="http://www.amazon.com/Adafruit-MCP4725-Breakout-Board-Interface/dp/B00SK8MBXI/ref=sr_1_1?s=electronics&ie=UTF8&qid=1452892790&sr=1-1&keywords=DAC+breakout+MCP4725" target="blank">Adafruit-MCP4725-Breakout-Board-Interface</a>
+	<br>
+	<a href="http://www.amazon.com/SparkFun-Danger-Shield/dp/B004G2KTKO/ref=sr_1_sc_1?ie=UTF8&qid=1452900717&sr=8-1-spell&keywords=sparkfun+dangershield" target="blank">SparkFun-Danger-Shield</a>
+	</p>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+BB8 design doc
+
+Two wheels and motor, which can respond to input from two tilt sensors (ST-00008)
+
+(?) IR receiver for directing robot?
+-OR-
+(?) Simply being self-correcting when pushed

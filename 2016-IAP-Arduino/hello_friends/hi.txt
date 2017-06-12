@@ -1,0 +1,55 @@
+<<<<<<< HEAD
+/b lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalallalalallalallalallalalallalallalalalallalalalalalalalalalalallallalalalalalalalalalalalalalalalalalalalalala/b
+"hello its me"
+
+Hello LOL! :) 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+<<<<<<< HEAD
+Can anyone else see this? -Harry
+
+Yes Harry. - Hannah
+
+How do you pronouce .gif? Does it have a hard g or a soft g?
+=======
+<<<<<<< Updated upstream
+/b lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalallalalallalallalallalalallalallalalalallalalalalalalalalalalallallalalalalalalalalalalalalalalalalalalalalala/b
+"hello its me"
+
+=======
+<<<<<<< Updated upstream
+>>>>>>> origin/master
+<<<<<<< HEAD
+/b lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalallalalallalallalallalalallalallalalalallalalalalalalalalalalallallalalalalalalalalalalalalalalalalalalalalala/b
+"hello its me"
+=======
+Can anyone else see this? -Harry
+>>>>>>> origin/master
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+=======
+
+Can anyone else see this? -Harry
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+
+=========
+"Q: How many molecules in a bowl of guacamole? A: Avacado's Number"
+
+>>>>>>> origin/master
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+When in the Course of human events it becomes necessary for one people to dissolve the political bands which have connected them with another and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.
+>>>>>>> origin/PATLU
+=======
+>>>>>>> master
+>>>>>>> origin/master
+=======
+>>>>>>> master
+>>>>>>> origin/master
