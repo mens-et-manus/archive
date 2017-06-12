@@ -1,0 +1,6 @@
+Goshzilla is a 3D kinect-based action game in which you, a kind, gentle and uncomfortably large monster, 
+must lumber through the city with as few casualties as posssible. You control Goshzilla with your whole body:
+when you move your arms and head, he moves his in the same way, and when you stomp your feet, Goshzilla moves
+forward. As you walk through the city, you must contort your body to avoid the absurd modernist architecture that
+plagues the downtown core; bumping into buildings will cause casualties, and if you get too many casualties the
+city calls in the military and you lose. 

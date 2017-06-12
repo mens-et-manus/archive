@@ -1,0 +1,64 @@
+.body {
+    background-color: #ecf0f1;
+    overflow-x: hidden;     
+}
+
+/*Figures*/
+figcaption {
+    padding-top: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Social Buttons*/
+.social-media-bar {
+    margin: 0 auto;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.icon {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0px 5px 10px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.icon--github {
+    padding: 0px 2px 3px 2px;
+}
+
+.icon--spotify {
+    padding: 0px 0px 1px 4px;
+}
+
+/*Home Page*/
+#personal-statement {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding-top: 175px;
+}
+
+#personal-statement h1 {
+    font-size: 40px;
+}
+
+#personal-statement p {
+    font-size: 20px;
+    padding-left: 22px;
+    padding-right: 22px;  
+}
+
+/*Page Header*/
+.page-header {
+    padding-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+}

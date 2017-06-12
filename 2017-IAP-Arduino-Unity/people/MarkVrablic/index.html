@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body bgcolor="#000000">
+    
+<head>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js></script>
+
+<style>
+
+h3 {text-align: center}
+h4 {text-align: right}
+
+iframe {
+    display:block;
+    width:100%;
+	height:600px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+    width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.hilightswitch {
+  position: relative;
+  display: inline;
+    width: 60px;
+  height: 34px;
+}
+
+.hilightswitch input {display:none;}
+    
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.shader:before {
+  background-color: black;
+  color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+input:checked + .shader:before {
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+</head>
+
+    
+    
+    
+    <div class="w3-container w3-black w3-bottombar w3-border-blue">
+  <h1>Mark's Webpage</h1> 
+  <p1>Below is a nonfunctional demo of my room's control panel, using Arduino and lots of relays...</p1> 
+</div>
+
+<div class="w3-row-padding w3-black w3-topbar w3-border-black">
+
+
+<button id="mainpower" style="color: #FFFFFF; transition: background .5s;" onclick="powercycle()" class="w3-third whiteout w3-btn">
+    <h2>Main Power</h2>
+    <p id="powertext">System loading</p>
+    <br>
+</button>
+
+<button onclick="document.getElementById('lightingmodes').style.display='block'" class="w3-third w3-black w3-btn w3-hover-gray">
+  <h2>Lighting Mode</h2>
+  <p>Make the lights blinky here</p>
+  <br>
+  
+</button>
+
+    
+<button id="projectorpower" style="color: #FFFFFF; transition: background .5s;" onclick="projectorcycle()" class="w3-third projector w3-btn">
+    <h2>Projector Screen</h2>
+    <p id="projectortext">System loading</p>
+    <br>
+</button>
+    
+<button onclick="document.getElementById('manualcontrol').style.display='block'" class="w3-third w3-black w3-btn w3-hover-gray">
+  <h2>Manual Control</h2>
+  <p>Turn on sets or individual lights</p>
+  <br>
+  <br>
+</button>
+
+<button onclick="document.getElementById('viewwebcam').style.display='block'" class="w3-third w3-black w3-btn w3-hover-gray">
+  <h2>Webcam</h2>
+  <p>View the room in real time</p>
+  <br>
+  <br>
+</button>
+
+<button onclick="document.getElementById('doorcycle').style.display='block'; doortimerprogress()" class="w3-third w3-blue w3-btn w3-hover-yellow">
+  <h2>Unlock Me!</h2>
+  <p>Why use a key?</p>
+  <br>
+  <br>
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Manual light control -->
+      <div id="manualcontrol" class="w3-modal">
+        <div class="w3-modal-content w3-card-8 w3-animate-top">
+          <header class="w3-container w3-blue"> 
+            <span onclick="document.getElementById('manualcontrol').style.display='none'" 
+            class="w3-closebtn">&times;</span>
+            <h2>Individual light control</h2>
+          </header>
+		  <div class="w3-row-padding w3-black w3-topbar w3-border-black">
+			<button id="desklights" style="color: #FFFFFF; transition: background .5s;" onclick="desklight()" class="w3-half whiteout w3-btn">
+				<h2>Desk Lights</h2>
+				<p>toggle</p>
+				<br>
+			</button>
+			<button id="mainpower" style="color: #FFFFFF; transition: background .5s;" onclick="powercycle()" class="w3-half whiteout w3-btn">
+				<h2>Main Power</h2>
+				<p id="powertext">System loading</p>
+				<br>
+			</button>
+			<button id="mainpower" style="color: #FFFFFF; transition: background .5s;" onclick="powercycle()" class="w3-half whiteout w3-btn">
+				<h2>Main Power</h2>
+				<p id="powertext">System loading</p>
+				<br>
+			</button>
+		  
+            
+          </div>
+        </div>
+      </div>    
+
+<!-- Lighting modes -->
+      <div id="lightingmodes" class="w3-modal">
+        <div class="w3-modal-content w3-card-8 w3-animate-top">
+          <header class="w3-container w3-blue"> 
+            <span onclick="document.getElementById('lightingmodes').style.display='none'" 
+            class="w3-closebtn">&times;</span>
+            <h2>Select an effect</h2>
+          </header>
+          <div class="w3-container w3-indigo">
+            <div class="w3-half">
+              <h3>Chase mode</h3>
+            </div>
+            <div class="w3-half">
+              <br>
+              <label class="switch">
+                <input type="checkbox">
+                <div class="slider"></div>
+              </label>
+            </div>
+            <div class="w3-half">
+              <h3>Strobe mode</h3>
+            </div>
+            <div class="w3-half">
+              <br>
+              <label class="switch">
+                <input type="checkbox">
+                <div class="slider"></div>
+              </label>
+            </div>
+            <div class="w3-half">
+              <h3>Sparkle mode</h3>
+            </div>
+            <div class="w3-half">
+              <br>
+              <label class="switch">
+                <input type="checkbox">
+                <div class="slider"></div>
+              </label>
+            </div>
+ 
+          </div>
+        </div>
+      </div>  
+
+<!-- View Webcam -->
+      <div id="viewwebcam" class="w3-modal">
+        <div class="w3-modal-content w3-card-8 w3-animate-top">
+          <header class="w3-container w3-blue"> 
+            <span onclick="document.getElementById('viewwebcam').style.display='none'" 
+            class="w3-closebtn">&times;</span>
+            <h2>Webcam View</h2>
+          </header>
+		  <div class="w3-row-padding w3-black w3-topbar w3-border-black">
+			<iframe src="http://18.248.7.223:8081/">
+			</iframe>
+		  
+
+          </div>
+        </div>
+      </div>
+
+
+<!-- door lock cylcle -->
+      <div id="doorcycle" class="w3-modal">
+        <div class="w3-modal-content w3-card-8 w3-animate-zoom">
+          <header class="w3-container w3-yellow"> 
+            <h3>Door Unlocked!</h3>
+          </header>
+          <div class="w3-container w3-black">
+              <br>
+              <div class="w3-progress-container w3-black">
+                <div id="doorcountdown" class="w3-progressbar w3-yellow" style="width:20%">
+                </div>
+              </div>
+              <h3 id="timeremaining">5</h3>
+            
+          </div>
+        </div>
+      </div>    
+    
+
+<script>
+// Get the modal
+var modal = document.getElementById('manualcontrol');
+var modal2 = document.getElementById('lightingmodes');
+var modal3 = document.getElementById('viewwebcam');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    else if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+    else if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+}
+
+
+////////////////////////////setup stuff//////////////////////////////////////
+    datainarray = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -35, -38]
+	var masterpower = datainarray[1]; //fetch current state format: [mainpower, projectorscreen, lightmodearray, lightarray]
+    var projectorstate = datainarray[2];
+    if (masterpower == 1){
+        $(".whiteout").css("background-color","#2196F3");
+        document.getElementById("powertext").innerHTML = "Tap to turn off";
+    } else {
+        $(".whiteout").css("background-color","black");
+        document.getElementById("powertext").innerHTML = "Tap to turn on";
+    }
+    if (projectorstate == 1){
+        $(".projector").css("background-color","#2196F3");
+        document.getElementById("projectortext").innerHTML = "Tap to raise";
+    } else {
+        $(".projector").css("background-color","black");
+        document.getElementById("projectortext").innerHTML = "Tap to lower";
+    }
+////////////////////////////end setup/////////////////////////////////////////
+    
+    
+function powercycle() {
+    $.ajax({
+            url: 'powercycle',
+			type: 'POST'});
+    if (masterpower == 0){
+        $(".whiteout").css("background-color","#2196F3");
+        masterpower = 1;
+        document.getElementById("powertext").innerHTML = "Tap to turn off";
+    } else {
+        $(".whiteout").css("background-color","black");
+        masterpower = 0;
+        document.getElementById("powertext").innerHTML = "Tap to turn on";
+    }
+    // enable vibration support
+	navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+    if (navigator.vibrate) {
+	  navigator.vibrate(100);
+    }
+}
+
+function projectorcycle() {
+    $.ajax({
+            url: 'projectorcycle',
+			type: 'POST'});
+	if (projectorstate == 0){
+        $(".projector").css("background-color","#2196F3");
+        projectorstate = 1;
+        document.getElementById("projectortext").innerHTML = "Tap to raise";
+    } else {
+        $(".projector").css("background-color","black");
+        projectorstate = 0;
+        document.getElementById("projectortext").innerHTML = "Tap to lower";
+    }
+    // enable vibration support
+	navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+    if (navigator.vibrate) {
+	  navigator.vibrate(100);
+    }
+}
+
+function doortimerprogress() {
+  $.ajax({
+          url: 'doorcycle',
+		  type: 'POST'});
+  var elem = document.getElementById("doorcountdown");   
+  var width = 0;
+  var countdown = 550;             //in ms/10
+  var id = setInterval(frame, 10);
+  function frame() {
+
+      elem.style.width = countdown/5.50 + "%";
+      //console.log(100-countdown/5.50);
+      var num = countdown * 1 / 100;
+      num = num.toFixed(0)
+      document.getElementById("timeremaining").innerHTML = num  + ' seconds remaining';
+      countdown--;
+      if (countdown == 0) {
+        document.getElementById('doorcycle').style.display='none'
+        clearInterval(id);
+      }
+  }
+    // enable vibration support
+        navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+        if (navigator.vibrate) {
+	    navigator.vibrate(100);
+    }
+}
+
+function desklight() {
+    $.ajax({
+            url: 'desklightcycle',
+			type: 'POST'});
+    // enable vibration support
+	navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+    if (navigator.vibrate) {
+	  navigator.vibrate(100);
+    }
+}
+</script>
+
+
+</body>
+</html>
+

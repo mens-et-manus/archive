@@ -1,0 +1,40 @@
+Harry Thaman
+- Previous Team:
+   - Knock, knock, lock
+- Specialties:
+   - Sensor input/output and troubleshooting
+   - Data collection, checking input vs. expected values
+
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+Neil Aggarwal
+- Previous Team:
+   - Knock, knock, lock
+- Specialties:
+   - Lights and sound integration
+   - Positive team spirit
+=======
+Andrew Bahle
+- Previous Team: Music/Light Show
+>>>>>>> origin/master
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+Josue Lopez
+- Previous Team: Music/Light Show
+- Worked with Processing to slice mp3
+- Worked with trying to figure out light sensor
+=======
+>>>>>>> Stashed changes
+=======
+Amir Cohen
+- No previous Team
+- Specialties:
+   - Played a bit with the IR sensors
+
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> origin/master
+>>>>>>> Stashed changes

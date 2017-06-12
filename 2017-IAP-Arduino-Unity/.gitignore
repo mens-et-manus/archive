@@ -1,0 +1,41 @@
+# See http://answers.unity3d.com/questions/21065/which-folders-in-a-unity-project-are-critical-fold.html
+# unity
+**/[Ll]ibrary/*
+**/[Tt]emp/*
+**/[Oo]bj/*
+**/[Bb]uild/*
+**/[Bb]uilds/*
+**/UnityGenerated/*
+**/Assets/AssetStoreTools*
+
+sysinfo.txt
+*.apk
+*.unitypackage
+
+# visual studio
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.pidb.meta
+*.booproj
+*.svd
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+*.app
+*.exe
+
+# include meta
+!*.*.meta
+
+

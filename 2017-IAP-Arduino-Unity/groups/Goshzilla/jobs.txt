@@ -1,0 +1,24 @@
+Job categories:
+
+Godzilla:
+  - script: map gestures to model (Tyler)
+  - script: stomp to move forward (Tyler)
+  
+City:
+  - objects: buildings (Matthew)
+  - design: organize buildings into levels (Kevin)
+  - script: physics of building destruction
+
+UI:
+  - script: casualties (Kevin)
+  --> calculating casualties
+  --> SFX for casualties
+  - script: distance travelled (Kevin)
+  
+Trimmings/front-end:
+  - title graphic (Kaelan) DONE
+  - in-game text (Kaelan)
+  - music (Kaelan)
+  - SFX (Kaelan) DONE
+  - textures (Kaelan) DONE
+  - background (Kaelan)

@@ -1,0 +1,6 @@
+public Camera follow;
+
+
+The following goes under FixedUpdate:
+
+follow.transform.localRotation = new Quaternion(0.0f, moveHorizontal * 360.0f, 0.0f, 180.0f) ;

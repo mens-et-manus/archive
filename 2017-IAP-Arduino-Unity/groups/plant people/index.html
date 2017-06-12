@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plant People</title>
+</head>
+
+<body>
+
+<h1>
+SMILE :)
+Soil Moisture Immersion Level Estimator
+</h1>
+
+<h2>
+Humans
+</h2>
+<p>Bryan Halloy</p>
+<p>Savannah Inglin</p>
+<p>Alexandra Rieger</p>
+<p>Chitti Desai</p>
+
+<h2>
+Project Description
+</h2>
+
+<p>
+We made a device that tells you how happy your plant is based on the moisture level of its soil using an Arduino UNO, a soil moisture sensor, and an RGB LED. 
+
+If your plant is thirsty, the indicator light will turn RED. 
+
+If your plant is feeling good in humid soil, the indicator light will turn GREEN. 
+
+If your plant has gone fishing in really wet soil, the indicator light will turn BLUE. 
+</p>
+
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DTb0k_P1wlY" frameborder="0" allowfullscreen></iframe>
+</br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xkohbr9ApMo" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>
+Technical Design
+</h2>
+<h3>
+Wiring
+</h3>
+<p>
+Unit cell (part numbers are randomly selected from Eagle library and may not be our eventual choice)
+</p>
+<img src="UnitCell.png" alt="Unit cell" style="width:500px;height:500px;">
+<p>
+64 cells altogether
+</p>
+<img src="64Cells.png" alt="Unit cell" style="width:1500px;height:1200px;">
+
+<h3>
+Shift-in registers
+</h3>
+<p>
+We use eight 8-bit parallel-load shift-in registers (SN74HC165) to read signals from 64 IR sensors.
+</p>
+<h4>
+How to operate a shift-in register
+</h4>
+<p>
+Datasheet can be found <a href="https://www.sparkfun.com/datasheets/Components/General/sn74hc165.pdf">here</a>.
+</p>
+<p>
+Pins:
+</p>
+<p>
+#1: SH/LD(bar) [stands for SHift (on HIGH)/LoaD (on LOW)]. When given a LOW, the chip loads data from 8 input pins (A~H: pin #11~14 and pin #3~6); when given a HIGH, the chip is prepared to shift data to the serial output QH (pin #9). By prepared, I mean it still needs to wait for a trigger, which is given by a falling edge of CLK-INH (pin #15).
+</p>
+<p>
+#2: CLK [stands for CLocK]. After the shift is triggered, a rising edge in CLK shifts the next internal register to the serial output QH (pin #9).
+</p>
+<p>
+#3~6: Input pins E~H. Inputs are sent into internal registers.
+</p>
+<p>
+#7: QH(bar): negated serial output.
+</p>
+<p>
+#8: GND: ground.
+</p>
+<p>
+#9: QH: serial output.
+</p>
+<p>
+#10: SER [stands for SERial]: serial input. The data that comes into this pin will be shift before all other pins (no need for a CLK rising edge).
+</p>
+<p>
+#11~14: Input pins A~D. Inputs are sent into internal registers.
+</p>
+<p>
+#15: CLK-INH [stands for CLocK-INHibit (on HIGH)]. When given a HIGH, the chip does not shift, in other words, CLK pin does not work; when given a LOW, the chip shifts. So a falling edge in CLK-INH triggers the shift.
+</p>
+<p>
+#16: Vcc: power supply.
+</p>
+
+<h2>
+Bill of Materials
+</h2>
+
+<h2>
+Arduino Coding
+</h2>
+
+-->
+
+</body>
+</html>

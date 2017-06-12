@@ -1,0 +1,26 @@
+Reflex team: Zijun, Guillermo, Nick
+
+We are interested in running+dodging obstacles game. Initially idea was
+bridge jumping, but we finally decide to work on a kinect version of Temple
+Runner.
+
+First, we would test-proof the initial phrase: we create a cube (controlled
+by a mouse) to represent the player, and simple obstacles (e.g. U shape, donut,
+mailbox, tree branch).
+
+Our immediate tasks are:
+
+Collision
+Obstacle templates
+Scoring system
+Sounds
+Force to move obstacles
+Pairing 1 joint of kinect with player, then 2 joints
+
+Future tasks:
+Pairing 2+ joints
+Player can pick up runes (invulnerable, fast/slow)
+Player design (a body mesh)
+Kinect - body - movement - player's appearance
+Background
+Shielding gesture (an unavoidable obstacle)

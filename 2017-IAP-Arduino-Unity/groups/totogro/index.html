@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>TotoGro!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body>
+
+  <a class="w3-btn-floating w3-display-left w3-grey" onclick="plusDivs(-1)">&#10094;</a>
+<div class="w3-content w3-display-container fill-screen">
+  <img class="mySlides make-it-fit" src="TotoGro.jpg" style="width:100%">
+  <img class="mySlides make-it-fit" src="TotoGro2.jpg" style="width:100%">
+  <img class="mySlides make-it-fit" src="TotoGro3.jpg" style="width:100%">
+  <img class="mySlides make-it-fit" src="TotoGro4.jpg" style="width:100%">
+  <img class="mySlides make-it-fit" src="TotoGro5.jpg" style="width:100%">
+  <img class="mySlides make-it-fit" src="TotoGro6.jpg" style="width:100%">
+
+</div>
+  <a class="w3-btn-floating w3-display-right w3-grey" onclick="plusDivs(1)">&#10095;</a>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

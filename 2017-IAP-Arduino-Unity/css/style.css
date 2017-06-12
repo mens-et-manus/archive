@@ -1,0 +1,12 @@
+img {
+	max-width: 100%;
+}
+.thumbnails img {
+	width: auto;
+	height: 100px;
+}
+
+h1 {
+	font-family: 'Bungee Shade';
+	color: red;
+}

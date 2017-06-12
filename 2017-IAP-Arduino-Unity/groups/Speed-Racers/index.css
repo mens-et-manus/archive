@@ -1,0 +1,32 @@
+
+.members {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.member-name {
+    color: white;
+    margin: auto;
+    padding-bottom: 40px;
+    font-size: 2em;
+}
+
+.body {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(http://wallpoper.com/images/00/36/61/48/cars-drift_00366148.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    color: white;
+    font-size: 4em;
+    margin: 60px auto 20px auto;
+    text-align: center;
+}
+
+.placeholder {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
